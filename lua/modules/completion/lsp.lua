@@ -29,26 +29,6 @@ lsp_installer.settings({
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
--- Override default format setting
-
-vim.lsp.handlers["textDocument/formatting"] = function(err, result, ctx)
-	if err ~= nil or result == nil then
-		return
-	end
-	if
-		vim.api.nvim_buf_get_var(ctx.bufnr, "init_changedtick") == vim.api.nvim_buf_get_var(ctx.bufnr, "changedtick")
-	then
-		local view = vim.fn.winsaveview()
-		vim.lsp.util.apply_text_edits(result, ctx.bufnr, "utf-8")
-		vim.fn.winrestview(view)
-		if ctx.bufnr == vim.api.nvim_get_current_buf() then
-			vim.b.saving_format = true
-			vim.cmd([[update]])
-			vim.b.saving_format = false
-		end
-	end
-end
-
 local function custom_attach(_)
 	require("lsp_signature").on_attach({
 		bind = true,
@@ -130,9 +110,7 @@ local enhance_server_opts = {
 				description = "Open source/header in a new split",
 			},
 		}
-		-- Disable `clangd`'s format
 		opts.on_attach = function(client)
-			client.resolved_capabilities.document_formatting = false
 			custom_attach(client)
 		end
 	end,
@@ -190,16 +168,12 @@ local enhance_server_opts = {
 		}
 	end,
 	["tsserver"] = function(opts)
-		-- Disable `tsserver`'s format
 		opts.on_attach = function(client)
-			client.resolved_capabilities.document_formatting = false
 			custom_attach(client)
 		end
 	end,
 	["dockerls"] = function(opts)
-		-- Disable `dockerls`'s format
 		opts.on_attach = function(client)
-			client.resolved_capabilities.document_formatting = false
 			custom_attach(client)
 		end
 	end,
@@ -215,9 +189,7 @@ local enhance_server_opts = {
 				},
 			},
 		}
-		-- Disable `gopls`'s format
 		opts.on_attach = function(client)
-			client.resolved_capabilities.document_formatting = false
 			custom_attach(client)
 		end
 	end,
