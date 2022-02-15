@@ -8,10 +8,15 @@ local key_mapping = {
 	["n|<leader>w/"] = map_cr("vs"):with_noremap():with_silent(),
 	["n|<leader>w-"] = map_cr("sv"):with_noremap():with_silent(),
 
+	-- 关闭高亮
+	["n|<leader>nh"] = map_cr("noh"):with_noremap():with_silent(),
+
 	-- 内置终端
 	['n|<leader>"'] = map_cr("VTerm"):with_noremap():with_silent(),
 	["n|<leader>'"] = map_cr("Term"):with_noremap():with_silent(),
 	["n|<leader>`"] = map_cr('lua require("FTerm").toggle()'):with_noremap():with_silent(),
+	-- 一键关闭终端
+	["t|<C-Q>"] = map_cmd("exit<CR>"):with_noremap():with_silent(),
 
 	-- 打开当前文件的FileTree
 	["n|<leader>ff"] = map_cr("NvimTreeFindFile"):with_noremap():with_silent(),
@@ -33,22 +38,22 @@ local key_mapping = {
 	["n|<leader>bb"] = map_cr("BufferLinePick"):with_noremap():with_silent(),
 	["n|<leader>bn"] = map_cr("BufferLineCycleNext"):with_noremap():with_silent(),
 	["n|<leader>bp"] = map_cr("BufferLineCyclePrev"):with_noremap():with_silent(),
-	["n|<leader>b1"] = map_cr("BufferLineGoToBuffer 1"):with_noremap():with_silent(),
-	["n|<leader>b2"] = map_cr("BufferLineGoToBuffer 2"):with_noremap():with_silent(),
-	["n|<leader>b3"] = map_cr("BufferLineGoToBuffer 3"):with_noremap():with_silent(),
-	["n|<leader>b4"] = map_cr("BufferLineGoToBuffer 4"):with_noremap():with_silent(),
-	["n|<leader>b5"] = map_cr("BufferLineGoToBuffer 5"):with_noremap():with_silent(),
-	["n|<leader>b6"] = map_cr("BufferLineGoToBuffer 6"):with_noremap():with_silent(),
-	["n|<leader>b7"] = map_cr("BufferLineGoToBuffer 7"):with_noremap():with_silent(),
-	["n|<leader>b8"] = map_cr("BufferLineGoToBuffer 8"):with_noremap():with_silent(),
-	["n|<leader>b9"] = map_cr("BufferLineGoToBuffer 9"):with_noremap():with_silent(),
+	["n|<leader>1"] = map_cr("BufferLineGoToBuffer 1"):with_noremap():with_silent(),
+	["n|<leader>2"] = map_cr("BufferLineGoToBuffer 2"):with_noremap():with_silent(),
+	["n|<leader>3"] = map_cr("BufferLineGoToBuffer 3"):with_noremap():with_silent(),
+	["n|<leader>4"] = map_cr("BufferLineGoToBuffer 4"):with_noremap():with_silent(),
+	["n|<leader>5"] = map_cr("BufferLineGoToBuffer 5"):with_noremap():with_silent(),
+	["n|<leader>6"] = map_cr("BufferLineGoToBuffer 6"):with_noremap():with_silent(),
+	["n|<leader>7"] = map_cr("BufferLineGoToBuffer 7"):with_noremap():with_silent(),
+	["n|<leader>8"] = map_cr("BufferLineGoToBuffer 8"):with_noremap():with_silent(),
+	["n|<leader>9"] = map_cr("BufferLineGoToBuffer 9"):with_noremap():with_silent(),
 	-- 删除buffer
 	["n|<leader>bd"] = map_cr("Bdelete"):with_noremap():with_silent(),
 	["n|<leader>bc"] = map_cr("BufClean"):with_noremap():with_silent(),
 
 	-- Hop: 快速跳转
-	["n|<leader>h"] = map_cr("HopLine"):with_noremap():with_silent(),
-	["n|<leader>w"] = map_cr("HopWord"):with_noremap():with_silent(),
+	["n|<leader>jj"] = map_cr("HopLine"):with_noremap():with_silent(),
+	["n|<leader>jw"] = map_cr("HopWord"):with_noremap():with_silent(),
 }
 
 local function load_keymap()

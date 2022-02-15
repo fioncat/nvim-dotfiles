@@ -94,7 +94,16 @@ local function load_options()
 		vim.cmd('vmap cy "+yy')
 	end
 	bind_option()
+	-- 设置主题
 	vim.cmd([[colorscheme catppuccin]])
+
+	-- :w命令时常会误输入为:W，因此这里做一个映射
+	vim.cmd([[cnoreabbrev W w]])
+
+	-- Ctrl-A 跳转到当前行首，就像Emacs那样
+	-- 重新将Ctrl-S映射为数字加2
+	vim.cmd([[nnoremap <C-s> <C-a>]])
+	vim.cmd([[nnoremap <C-a> ^]])
 end
 
 load_options()

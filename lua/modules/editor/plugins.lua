@@ -20,12 +20,6 @@ editor["terrortylor/nvim-comment"] = {
 		})
 	end,
 }
--- 当前代码的结构展示，需要LSP支持。:SymbolsOutline
-editor["simrat39/symbols-outline.nvim"] = {
-	opt = true,
-	cmd = { "SymbolsOutline", "SymbolsOutlineOpen" },
-	config = conf.symbols_outline,
-}
 
 -- 语法高亮大杀器，性能比原生正则要大大的好
 -- 使用 :TSInstall <language> 来安装语言的高亮
@@ -108,12 +102,6 @@ editor["norcalli/nvim-colorizer.lua"] = {
 	config = conf.nvim_colorizer,
 }
 
--- 自动检测并管理项目的Session
-editor["rmagatti/auto-session"] = {
-	opt = true,
-	cmd = { "SaveSession", "RestoreSession", "DeleteSession" },
-	config = conf.auto_session,
-}
 -- 快速地离开InsertMode，防止因为键盘输入字符过快导致的延迟
 editor["jdhao/better-escape.vim"] = { opt = true, event = "InsertEnter" }
 -- Git管理工具
@@ -122,12 +110,6 @@ editor["tpope/vim-fugitive"] = { opt = true, cmd = { "Git", "G" } }
 editor["famiu/bufdelete.nvim"] = {
 	opt = true,
 	cmd = { "Bdelete", "Bwipeout", "Bdelete!", "Bwipeout!" },
-}
--- 在进行代码跳转时，进行高亮提示
-editor["edluffy/specs.nvim"] = {
-	opt = true,
-	event = "CursorMoved",
-	config = conf.specs,
 }
 -- 自动补齐括号对
 editor["jiangmiao/auto-pairs"] = {
