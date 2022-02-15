@@ -26,6 +26,8 @@ return packer.startup(function ()
 	add_plugins('display')
 	add_plugins('editor')
 	add_plugins('tools')
+	-- TODO: use lsp
+	add_plugins('coc')
 
 	use({ "wbthomason/packer.nvim", opt = true })
 	for name, conf in pairs(all_plugins) do
