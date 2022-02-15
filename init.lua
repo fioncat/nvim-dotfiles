@@ -3,4 +3,5 @@ if not vim.g.vscode then
 	require('plugins')
 	require('keymap')
 	require('event')
+	require('dashboard')
 end
