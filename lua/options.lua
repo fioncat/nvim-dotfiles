@@ -66,21 +66,6 @@ local options = {
 
 	signcolumn='yes:1',
 
-	wildignorecase = true,
-	wildignore = ".git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**",
-
-	history = 2000,
-	errorbells = true,
-	visualbell = true,
-	hidden = true,
-	fileformats = "unix,mac,dos",
-	magic = true,
-	virtualedit = "all",
-
-	sessionoptions = "curdir,help,tabpages,winsize",
-
-	showmode = false,
-	shortmess = "aoOTIcF",
 }
 
 local function bind_option()

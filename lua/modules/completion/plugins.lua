@@ -14,7 +14,6 @@ completion["williamboman/nvim-lsp-installer"] = {
 	opt = true,
 	after = "nvim-lspconfig",
 }
--- LSP增强
 completion["RishabhRD/nvim-lsputils"] = {
 	opt = true,
 	after = "nvim-lspconfig",

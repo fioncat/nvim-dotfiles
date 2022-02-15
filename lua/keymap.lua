@@ -47,8 +47,8 @@ local key_mapping = {
 	["n|<leader>bc"] = map_cr("BufClean"):with_noremap():with_silent(),
 
 	-- Hop: 快速跳转
-	["n|<leader>hl"] = map_cr("HopLine"):with_noremap():with_silent(),
-	["n|<leader>hw"] = map_cr("HopWord"):with_noremap():with_silent(),
+	["n|<leader>h"] = map_cr("HopLine"):with_noremap():with_silent(),
+	["n|<leader>w"] = map_cr("HopWord"):with_noremap():with_silent(),
 }
 
 local function load_keymap()

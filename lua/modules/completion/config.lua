@@ -2,6 +2,7 @@ local config = {}
 
 function config.nvim_lsp()
 	require("modules.completion.lsp")
+	require("popfix")
 end
 
 function config.lightbulb()

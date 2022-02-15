@@ -45,14 +45,6 @@ tools["michaelb/sniprun"] = {
 	run = "bash ./install.sh",
 	cmd = { "SnipRun", "'<,'>SnipRun" },
 }
--- 查看目前输入的快捷键
-tools["folke/which-key.nvim"] = {
-	opt = true,
-	keys = " ",
-	config = function()
-		require("which-key").setup({})
-	end,
-}
 -- 展示当前项目的所有错误列表
 tools["folke/trouble.nvim"] = {
 	opt = true,
