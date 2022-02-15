@@ -61,6 +61,7 @@ function config.vim_cursorwod()
 	vim.api.nvim_command("autocmd InsertEnter * let b:cursorword = 0")
 	vim.api.nvim_command("autocmd InsertLeave * let b:cursorword = 1")
 	vim.api.nvim_command("augroup END")
+	vim.api.nvim_command("let g:cursorword_delay=1000")
 end
 
 function config.nvim_treesitter()

@@ -44,6 +44,7 @@ local key_mapping = {
 	["n|<leader>b9"] = map_cr("BufferLineGoToBuffer 9"):with_noremap():with_silent(),
 	-- 删除buffer
 	["n|<leader>bd"] = map_cr("Bdelete"):with_noremap():with_silent(),
+	["n|<leader>bc"] = map_cr("BufClean"):with_noremap():with_silent(),
 
 	-- Hop: 快速跳转
 	["n|<leader>hl"] = map_cr("HopLine"):with_noremap():with_silent(),

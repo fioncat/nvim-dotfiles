@@ -67,4 +67,10 @@ tools["nathom/filetype.nvim"] = {
 	config = conf.filetype,
 }
 
+-- 快速多个删除buffers
+tools["fioncat/vim-bufclean"] = {
+	opt = true,
+	cmd = { "BufClean" }
+}
+
 return tools

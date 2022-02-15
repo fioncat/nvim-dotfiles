@@ -1,4 +1,4 @@
--- Requre: git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+-- Require: git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 --           ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 local packer = require('packer')
@@ -26,8 +26,8 @@ return packer.startup(function ()
 	add_plugins('display')
 	add_plugins('editor')
 	add_plugins('tools')
-	-- TODO: use lsp
-	add_plugins('coc')
+	-- add_plugins('coc')
+	add_plugins('completion')
 
 	use({ "wbthomason/packer.nvim", opt = true })
 	for name, conf in pairs(all_plugins) do
