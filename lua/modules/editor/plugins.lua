@@ -55,6 +55,11 @@ editor["windwp/nvim-ts-autotag"] = {
 	ft = { "html", "xml" },
 	config = conf.autotag,
 }
+-- ts注释支持
+editor["JoosepAlviste/nvim-ts-context-commentstring"] = {
+	opt = true,
+	after = "nvim-treesitter",
+}
 -- 扩展vim的%，使其可以匹配一些脚本语言的关键词对
 -- 例如if, elif, else等
 editor["andymass/vim-matchup"] = {

@@ -45,7 +45,7 @@ tools["michaelb/sniprun"] = {
 	run = "bash ./install.sh",
 	cmd = { "SnipRun", "'<,'>SnipRun" },
 }
--- 在敲下leader之后，查看可供使用的快捷键列表
+-- 查看目前输入的快捷键
 tools["folke/which-key.nvim"] = {
 	opt = true,
 	keys = " ",

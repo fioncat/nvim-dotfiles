@@ -64,6 +64,8 @@ local options = {
 	background = 'dark',
 	termguicolors = true,
 
+	signcolumn='yes:1',
+
 	wildignorecase = true,
 	wildignore = ".git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**",
 
