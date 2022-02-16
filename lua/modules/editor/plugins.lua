@@ -111,9 +111,5 @@ editor["famiu/bufdelete.nvim"] = {
 	opt = true,
 	cmd = { "Bdelete", "Bwipeout", "Bdelete!", "Bwipeout!" },
 }
--- 自动补齐括号对
-editor["jiangmiao/auto-pairs"] = {
-	opt = false,
-}
 
 return editor

@@ -14,18 +14,17 @@ completion["williamboman/nvim-lsp-installer"] = {
 	opt = true,
 	after = "nvim-lspconfig",
 }
+-- LSP增强，修改一些行为让其更加人性化
 completion["RishabhRD/nvim-lsputils"] = {
 	opt = true,
 	after = "nvim-lspconfig",
 	config = conf.nvim_lsputils,
 }
+-- 用于自定义LSP相关的UI
 completion["tami5/lspsaga.nvim"] = { opt = true, after = "nvim-lspconfig" }
-completion["kosayoda/nvim-lightbulb"] = {
-	opt = true,
-	after = "nvim-lspconfig",
-	config = conf.lightbulb,
-}
+-- 当某些语言的LSP不支持函数签名实时展示时，需要通过这个插件来支持
 completion["ray-x/lsp_signature.nvim"] = { opt = true, after = "nvim-lspconfig" }
+-- nvim lua补全插件
 completion["hrsh7th/nvim-cmp"] = {
 	config = conf.cmp,
 	event = "InsertEnter",
@@ -47,15 +46,16 @@ completion["hrsh7th/nvim-cmp"] = {
 		-- }
 	},
 }
+-- snip支持
 completion["L3MON4D3/LuaSnip"] = {
 	after = "nvim-cmp",
 	config = conf.luasnip,
 	requires = "rafamadriz/friendly-snippets",
 }
+-- 自动补齐括号
 completion["windwp/nvim-autopairs"] = {
 	after = "nvim-cmp",
 	config = conf.autopairs,
 }
-completion["github/copilot.vim"] = { opt = true, cmd = "Copilot" }
 
 return completion

@@ -5,10 +5,6 @@ function config.nvim_lsp()
 	require("popfix")
 end
 
-function config.lightbulb()
-	vim.cmd([[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]])
-end
-
 function config.cmp()
 	vim.cmd([[highlight CmpItemAbbrDeprecated guifg=#D8DEE9 guibg=NONE gui=strikethrough]])
 	vim.cmd([[highlight CmpItemKindSnippet guifg=#BF616A guibg=NONE]])
