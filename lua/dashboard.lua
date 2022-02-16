@@ -23,26 +23,22 @@ local function load_dashboard()
 [[          /   /      /    /                _,. '    ,/           |   |  ]],
 [[          \_,'     _.'   /              /''     _,-'            _|   |  ]],
 [[                  '     /               `-----''               /     |  ]],
-[[                  `...-'     LazyCat                           `...-'   ]],
+[[                  `...-'     @LazyCat                          `...-'   ]],
 [[                                                                        ]]
 	}
 
 	vim.g.dashboard_custom_section = {
 		find_frecency = {
-			description = { " File frecency              comma f r " },
+			description = { " File frecency              SPC s r " },
 			command = "Telescope frecency",
 		},
 		find_project = {
-			description = { " Project find               comma f p " },
+			description = { " Project find               SPC s p " },
 			command = "Telescope project",
 		},
 		find_file = {
-			description = { " File find                  comma f f " },
+			description = { " File find                  SPC s f " },
 			command = "Telescope find_files",
-		},
-		file_new = {
-			description = { " File new                   comma f n " },
-			command = "DashboardNewFile",
 		},
 	}
 end

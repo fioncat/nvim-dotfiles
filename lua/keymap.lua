@@ -23,9 +23,10 @@ local key_mapping = {
 	["n|<leader>tt"] = map_cr("NvimTreeToggle"):with_noremap():with_silent(),
 
 	-- 搜索相关命令
-	["n|<leader>sf"] = map_cr("Telescope find_files"):with_noremap():with_silent(),
+	["n|<leader>sf"] = map_cr("Telescope git_files"):with_noremap():with_silent(),
 	["n|<leader>sg"] = map_cr("Telescope live_grep"):with_noremap():with_silent(),
 	["n|<leader>sb"] = map_cr("Telescope buffers"):with_noremap():with_silent(),
+	["n|<leader>ss"] = map_cr("Telescope find_files"):with_noremap():with_silent(),
 
 	-- 快速注释
 	["n|<leader>ci"] = map_cr("CommentToggle"):with_noremap():with_silent(),
