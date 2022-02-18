@@ -34,14 +34,6 @@ display["kyazdani42/nvim-tree.lua"] = {
 	config = conf.nvim_tree,
 }
 
--- 行号左边实时标记Git添加、修改、删除的行
-display["lewis6991/gitsigns.nvim"] = {
-	opt = true,
-	event = { "BufRead", "BufNewFile" },
-	config = conf.gitsigns,
-	requires = { "nvim-lua/plenary.nvim", opt = true },
-}
-
 -- 缩进标识，在每个缩进前用'|'标识
 display["lukas-reineke/indent-blankline.nvim"] = {
 	opt = true,

@@ -3,12 +3,6 @@ local conf = require("modules.editor.config")
 
 -- 用于代码的快速对齐
 editor["junegunn/vim-easy-align"] = { opt = true, cmd = "EasyAlign" }
--- 使用下划线高亮当前光标所在的单词
-editor["itchyny/vim-cursorword"] = {
-	opt = true,
-	event = { "BufReadPre", "BufNewFile" },
-	config = conf.vim_cursorwod,
-}
 -- 快速注释/取消注释，:CommentToggle
 editor["terrortylor/nvim-comment"] = {
 	opt = false,
