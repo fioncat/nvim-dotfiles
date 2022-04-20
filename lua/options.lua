@@ -104,6 +104,11 @@ local function load_options()
 	-- 重新将Ctrl-S映射为数字加2
 	vim.cmd([[nnoremap <C-s> <C-a>]])
 	vim.cmd([[nnoremap <C-a> ^]])
+
+	-- git blamer配置
+	vim.cmd([[let g:blamer_date_format = '%y-%m-%d']])
+	vim.cmd([[let g:blamer_show_in_visual_modes = 0]])
+	vim.cmd([[let g:blamer_show_in_insert_modes = 0]])
 end
 
 load_options()

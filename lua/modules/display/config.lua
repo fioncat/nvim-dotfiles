@@ -192,14 +192,14 @@ function config.nvim_tree()
 		open_on_tab = false,
 		hijack_cursor = true,
 		update_cwd = false,
-		update_to_buf_dir = { enable = true, auto_open = true },
+		update_to_buf_dir = { enable = false, auto_open = false },
 		diagnostics = {
 			enable = false,
 			icons = { hint = "", info = "", warning = "", error = "" },
 		},
 		update_focused_file = {
-			enable = true,
-			update_cwd = true,
+			enable = false,
+			update_cwd = false,
 			ignore_list = {},
 		},
 		system_open = { cmd = nil, args = {} },
@@ -236,7 +236,7 @@ function config.nvim_bufferline()
 			show_tab_indicators = true,
 			diagnostics = "nvim_lsp",
 			always_show_bufferline = true,
-			separator_style = "thin",
+			separator_style = "slant",
 			offsets = {
 				{
 					filetype = "NvimTree",
@@ -301,6 +301,10 @@ function config.indent_blankline()
 	})
 	-- because lazy load indent-blankline so need readd this autocmd
 	vim.cmd("autocmd CursorMoved * IndentBlanklineRefresh")
+end
+
+function config.blamer()
+	vim.g.blamer_enabled = 1
 end
 
 return config

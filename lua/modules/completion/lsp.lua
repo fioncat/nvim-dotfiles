@@ -178,6 +178,9 @@ local enhance_server_opts = {
 		end
 	end,
 	["gopls"] = function(opts)
+		local util = require "lspconfig/util"
+		opts.cmd = {"gopls", "serve"}
+		opts.root_dir = util.root_pattern("go.work", "go.mod", ".git")
 		opts.settings = {
 			gopls = {
 				usePlaceholders = false,

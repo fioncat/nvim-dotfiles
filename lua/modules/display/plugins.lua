@@ -30,7 +30,7 @@ display["glepnir/dashboard-nvim"] = { opt = true, event = "BufWinEnter" }
 -- 文件树插件
 display["kyazdani42/nvim-tree.lua"] = {
 	opt = true,
-	event = "BufRead",
+	event = "VimEnter",
 	config = conf.nvim_tree,
 }
 
@@ -47,8 +47,10 @@ display["akinsho/nvim-bufferline.lua"] = {
 	event = "BufRead",
 	config = conf.nvim_bufferline,
 }
-
--- 在右边显示滚动条
-display["dstein64/nvim-scrollview"] = { opt = true, event = "BufRead" }
-
+-- 实时显示git blamer信息
+display["APZelos/blamer.nvim"] = {
+	opt = true,
+	event = "BufRead",
+	config = conf.blamer,
+}
 return display
