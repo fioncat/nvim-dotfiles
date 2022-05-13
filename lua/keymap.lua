@@ -8,6 +8,10 @@ local key_mapping = {
 	["n|<leader>w/"] = map_cr("vs"):with_noremap():with_silent(),
 	["n|<leader>w-"] = map_cr("sv"):with_noremap():with_silent(),
 
+	-- 调整窗口大小
+	["n|<C-W>0"] = map_cr(":vertical resize+2"):with_noremap():with_silent(),
+	["n|<C-W>9"] = map_cr(":vertical resize-2"):with_noremap():with_silent(),
+
 	-- 关闭高亮
 	["n|<leader>nh"] = map_cr("noh"):with_noremap():with_silent(),
 

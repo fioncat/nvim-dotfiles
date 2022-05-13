@@ -50,7 +50,7 @@ display["akinsho/nvim-bufferline.lua"] = {
 -- 实时显示git blamer信息
 display["APZelos/blamer.nvim"] = {
 	opt = true,
-	event = "BufRead",
 	config = conf.blamer,
+	event = "BufEnter",
 }
 return display
