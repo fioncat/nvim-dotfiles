@@ -31,6 +31,29 @@ brew install sqlite3
 brew install fzf
 ```
 
+执行下面的命令开始安装插件：
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/fioncat/nvim-dotfiles/master/install-0.sh)"
+```
+
+执行完毕之后，进入NeoVim，输入：
+
+```shell
+:PackerInstall
+:PackerCompile
+```
+
+Install有大概率会失败，可以多执行几次。
+
+结束之后，执行：
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/fioncat/nvim-dotfiles/master/install-1.sh)"
+```
+
+这样插件就安装完毕了。
+
 ## Plugins
 
 **插件列表：**
