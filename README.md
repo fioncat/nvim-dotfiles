@@ -41,7 +41,7 @@ brew install node
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/fioncat/nvim-dotfiles/master/install-0.sh)"
 ```
 
-执行完毕之后，进入NeoVim，输入：
+执行完毕之后，进入NeoVim，输入，注意，当询问你`Removing the following directories. OK? (y/N)`时，一定要选`N`，否则会失败：
 
 ```shell
 :PackerInstall
