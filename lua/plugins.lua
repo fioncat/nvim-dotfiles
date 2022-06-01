@@ -25,10 +25,9 @@ return packer.startup(function ()
 
 	add_plugins('display')
 	add_plugins('editor')
-	-- add_plugins('tools')
-	-- add_plugins('coc')
-	-- add_plugins('completion')
-	-- add_plugins('lang')
+	add_plugins('tools')
+	add_plugins('completion')
+	add_plugins('lang')
 
 	-- use({ "wbthomason/packer.nvim", opt = true })
 	for name, conf in pairs(all_plugins) do
