@@ -1,5 +1,5 @@
 if [ -d $HOME/.conf/nvim ]; then
-	rm -rf $HOME/.conf/nvim-back
+	rm -rf $HOME/.conf/nvim
 fi
 if [ -d $HOME/.local/share/nvim/site ]; then
 	rm -rf $HOME/.local/share/nvim/site
