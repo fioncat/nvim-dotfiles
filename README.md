@@ -17,31 +17,38 @@
 因为使用了[packer](https://github.com/wbthomason/packer.nvim)作为打包工具，所在在开始前，先执行：
 
 ```shell
-$ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-安装配置：
+安装配置并进入：
 
 ```shell
 $ mv ~/.config/nvim ~/.config/nvim-bak
 $ git clone https://github.com/fioncat/nvim-dotfiles.git ~/.config/nvim
+$ cd ~/.config/nvim
 ```
 
-打开nvim，会看到报错，先忽略，直接执行`:PackerInstall`，packer会开始安装插件，随后执行`:PackerCompile`。重新再打开nvim即可。
+修改init.lua，暂时只保留`require('plugins')`：
 
-另外，需要通过`:LspInstall`来安装不同语言的LSP支持：
-
-```bash
-:LspInstall gopls          # Go语言
-:LspInstall rust_analyzer  # Rust
-:LspInstall dockerls       # Dockerfile
-:LspInstall bashls         # Bash
-:LspInstall jsonls         # JSON
-...
+```lua
+if not vim.g.vscode then
+	require('plugins')
+end
 ```
 
-通过`:LspInstallInfo`可以查看可供安装的语言列表。通过`:LspInfo`可以查看当前运行的LSP信息。
+完成之后，打开neovim，执行`:PackerInstall`和`:PackerCompile`。注意第一个选项要选`N`。
+
+最后，将`init.lua`改回来，即可完成安装：
+
+```lua
+if not vim.g.vscode then
+	require('options')
+	require('plugins')
+	require('keymap')
+	require('dashboard')
+end
+```
 
 ## Plugins
 
