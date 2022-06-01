@@ -12,4 +12,4 @@ NVM_HOME=$HOME/.config/nvim
 cd $NVM_HOME
 git checkout dev
 mv $NVM_HOME/init.lua $NVM_HOME/init-back.lua
-mv $NVM_HOME/init-install.lua $NVM_HOME/init.lua
+cp $NVM_HOME/init-install.lua $NVM_HOME/init.lua
