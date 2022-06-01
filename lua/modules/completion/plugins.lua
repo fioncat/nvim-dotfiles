@@ -55,8 +55,7 @@ completion["hrsh7th/nvim-cmp"] = {
 		--     after = 'cmp-spell',
 		--     config = conf.tabnine
 		-- }
-	},
-	commit = "ba47440a97710d0f4f63eea2bc196fe17297e4ae"
+	}
 }
 -- snip支持
 completion["L3MON4D3/LuaSnip"] = {
