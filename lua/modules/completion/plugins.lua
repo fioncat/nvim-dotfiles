@@ -62,7 +62,6 @@ completion["L3MON4D3/LuaSnip"] = {
 	after = "nvim-cmp",
 	config = conf.luasnip,
 	requires = "rafamadriz/friendly-snippets",
-	commit = "c1d07078dce0c9631e89a299e4b4a93334650a7b"
 }
 -- 自动补齐括号
 completion["windwp/nvim-autopairs"] = {
