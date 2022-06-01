@@ -12,42 +12,23 @@
 
 ## Install
 
-[NeoVim](https://neovim.io/)当然是必不可少的。可以在[Installing Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)找到各种系统的安装教程。
-
-因为使用了[packer](https://github.com/wbthomason/packer.nvim)作为打包工具，所在在开始前，先执行：
+首先需要安装最新版本的NeoVim：
 
 ```shell
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+brew install neovim
 ```
 
-安装配置并进入：
+有插件会依赖Rust，因此需要事先安装好：
 
 ```shell
-$ mv ~/.config/nvim ~/.config/nvim-bak
-$ git clone https://github.com/fioncat/nvim-dotfiles.git ~/.config/nvim
-$ cd ~/.config/nvim
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-修改init.lua，暂时只保留`require('plugins')`：
+另外还有一些额外的依赖：
 
-```lua
-if not vim.g.vscode then
-	require('plugins')
-end
-```
-
-完成之后，打开neovim，执行`:PackerInstall`和`:PackerCompile`。注意第一个选项要选`N`。
-
-最后，将`init.lua`改回来，即可完成安装：
-
-```lua
-if not vim.g.vscode then
-	require('options')
-	require('plugins')
-	require('keymap')
-	require('dashboard')
-end
+```shell
+brew install sqlite3
+brew install fzf
 ```
 
 ## Plugins

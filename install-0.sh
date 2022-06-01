@@ -10,6 +10,5 @@ git clone https://github.com/fioncat/nvim-dotfiles.git $HOME/.config/nvim
 
 NVM_HOME=$HOME/.config/nvim
 cd $NVM_HOME
-git checkout dev
 mv $NVM_HOME/init.lua $NVM_HOME/init-back.lua
 cp $NVM_HOME/init-install.lua $NVM_HOME/init.lua
