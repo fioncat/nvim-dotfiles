@@ -8,22 +8,33 @@ completion["neovim/nvim-lspconfig"] = {
 	opt = true,
 	event = "BufReadPre",
 	config = conf.nvim_lsp,
+	commit = "0da0023374a2acbab25e538383006f1404bf3c0d"
 }
 -- 使用 :LspInstall 来快速安装LSP服务器
 completion["williamboman/nvim-lsp-installer"] = {
 	opt = true,
 	after = "nvim-lspconfig",
+	commit = "1dd5a25a61c38d3b5c72f74a3358d97764ad79e1"
 }
 -- LSP增强，修改一些行为让其更加人性化
 completion["RishabhRD/nvim-lsputils"] = {
 	opt = true,
 	after = "nvim-lspconfig",
 	config = conf.nvim_lsputils,
+	commit = "ae1a4a62449863ad82c70713d5b6108f3a07917c"
 }
 -- 用于自定义LSP相关的UI
-completion["tami5/lspsaga.nvim"] = { opt = true, after = "nvim-lspconfig" }
+completion["tami5/lspsaga.nvim"] = {
+	opt = true,
+	after = "nvim-lspconfig",
+	commit = "511a335b470aa32ceb6ba8d53d61f6b52362c6f4"
+}
 -- 当某些语言的LSP不支持函数签名实时展示时，需要通过这个插件来支持
-completion["ray-x/lsp_signature.nvim"] = { opt = true, after = "nvim-lspconfig" }
+completion["ray-x/lsp_signature.nvim"] = {
+	opt = true,
+	after = "nvim-lspconfig",
+	commit = "ee290010800a5af43ca7b59987718b540a0b2b38"
+}
 -- nvim lua补全插件
 completion["hrsh7th/nvim-cmp"] = {
 	config = conf.cmp,
@@ -44,7 +55,7 @@ completion["hrsh7th/nvim-cmp"] = {
 		--     after = 'cmp-spell',
 		--     config = conf.tabnine
 		-- }
-	},
+	}
 }
 -- snip支持
 completion["L3MON4D3/LuaSnip"] = {
@@ -56,6 +67,7 @@ completion["L3MON4D3/LuaSnip"] = {
 completion["windwp/nvim-autopairs"] = {
 	after = "nvim-cmp",
 	config = conf.autopairs,
+	commit = "784398a8f184431fd4329f20b0e4f52e87707bbd"
 }
 
 return completion

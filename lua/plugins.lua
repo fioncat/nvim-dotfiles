@@ -26,7 +26,6 @@ return packer.startup(function ()
 	add_plugins('display')
 	add_plugins('editor')
 	add_plugins('tools')
-	-- add_plugins('coc')
 	add_plugins('completion')
 	add_plugins('lang')
 
