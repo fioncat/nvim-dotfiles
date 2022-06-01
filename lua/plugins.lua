@@ -30,7 +30,7 @@ return packer.startup(function ()
 	add_plugins('completion')
 	add_plugins('lang')
 
-	use({ "wbthomason/packer.nvim", opt = true })
+	-- use({ "wbthomason/packer.nvim", opt = true })
 	for name, conf in pairs(all_plugins) do
 		use(vim.tbl_extend("force", { name }, conf))
 	end
