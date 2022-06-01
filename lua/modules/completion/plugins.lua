@@ -27,7 +27,7 @@ completion["RishabhRD/nvim-lsputils"] = {
 completion["tami5/lspsaga.nvim"] = {
 	opt = true,
 	after = "nvim-lspconfig",
-	commit = "0da0023374a2acbab25e538383006f1404bf3c0d"
+	commit = "511a335b470aa32ceb6ba8d53d61f6b52362c6f4"
 }
 -- 当某些语言的LSP不支持函数签名实时展示时，需要通过这个插件来支持
 completion["ray-x/lsp_signature.nvim"] = {
