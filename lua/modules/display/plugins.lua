@@ -5,9 +5,16 @@ local conf = require("modules.display.config")
 display["kyazdani42/nvim-web-devicons"] = { opt = false }
 
 -- 主题：https://github.com/sainnhe/edge
-display["sainnhe/edge"] = { opt = false, config = conf.edge }
+display["sainnhe/edge"] = {
+	opt = false, config = conf.edge,
+	commit = "8203d4e3ba2d586fdc652da586cfdb03fa83d3c9"
+}
 -- 主题：https://github.com/rebelot/kanagawa.nvim
-display["rebelot/kanagawa.nvim"] = { opt = false, config = conf.kanagawa }
+display["rebelot/kanagawa.nvim"] = {
+	opt = false,
+	config = conf.kanagawa,
+	commit = "e3a1037905c27a04b1725dc4d4006c4408bcd198"
+}
 -- 主题：https://github.com/catppuccin/nvim
 display["catppuccin/nvim"] = {
 	opt = false,
