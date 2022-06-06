@@ -81,7 +81,7 @@ editor["phaazon/hop.nvim"] = {
 	config = function()
 		require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
 	end,
-	commit = "e3c9fc3ab1e1db6bfb4f19377c53d0e457e0e2e9",
+	commit = "75f73d3959a0df7ef3642fd5138acdb1ce50fdc8",
 }
 -- 丝滑地进行滑动，这会影响到屏幕滚动命令，例如<C-d> <C-u>
 editor["karb94/neoscroll.nvim"] = {
