@@ -12,4 +12,15 @@ lang["fioncat/vim-minigo"] = {
 	end,
 }
 
+-- Delve 调试工具
+lang["sebdah/vim-delve"] = {
+	config = function ()
+		vim.api.nvim_command([[autocmd FileType go nnoremap gdb :DlvToggleBreakpoint<CR>]])
+		vim.api.nvim_command([[autocmd FileType go nnoremap gdr :DlvToggleTracepoint<CR>]])
+		vim.api.nvim_command([[autocmd FileType go nnoremap gdc :DlvClearAll<CR>]])
+		vim.api.nvim_command([[autocmd FileType go nnoremap gdd :DlvDebug -- ]])
+		vim.api.nvim_command([[autocmd FileType go nnoremap gdt :DlvTest -- -test.run]])
+	end,
+}
+
 return lang
