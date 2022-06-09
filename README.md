@@ -33,6 +33,7 @@ brew install rg
 brew install lua
 brew install luakit
 brew install node
+brew install bat
 ```
 
 执行下面的命令开始安装插件：
