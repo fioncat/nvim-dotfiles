@@ -3,7 +3,7 @@
 现代化的NeoVim配置，[ayamir/nvimdots](https://github.com/ayamir/nvimdots)的私人定制版。
 
 - 使用Space作为leader
-- 完全使用LUA进行配置，完全舍弃VimScript
+- 完全使用LUA进行配置，舍弃VimScript
 - 尽量使用LUA编写的插件，除了少数几个还是用的vim插件
 - 使用[treesitter](https://github.com/nvim-treesitter/nvim-treesitter)作为语法高亮器，极其高效
 - 使用nvim的原生LSP进行代码补全
