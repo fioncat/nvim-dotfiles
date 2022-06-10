@@ -36,10 +36,10 @@ brew install node
 brew install bat
 ```
 
-执行下面的命令开始安装插件：
+执行下面的命令初始化SpaceNeovim：
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/fioncat/nvim-dotfiles/master/install-0.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/fioncat/nvim-dotfiles/master/scripts/init.sh)"
 ```
 
 执行完毕之后，进入NeoVim，输入下面的命令，注意，当询问你`Removing the following directories. OK? (y/N)`时，一定要选`N`，否则会失败：
@@ -49,12 +49,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/fioncat/nvim-dotfiles/mast
 :PackerCompile
 ```
 
-Install有大概率会失败，可以多执行几次。
+注意上述安装必须确保你的本机有Rust编译环境，否则`luasnip`插件会安装失败。安装过程因为是并发的，所以因为网络原因有部分插件可能会失败，只需要重新执行`:PackerInstall`即可。
 
 结束之后，执行：
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/fioncat/nvim-dotfiles/master/install-1.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/fioncat/nvim-dotfiles/master/scripts/install.sh)"
 ```
 
 这样插件就安装完毕了。
@@ -78,6 +78,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/fioncat/nvim-dotfiles/mast
 :LspInstall jedi_language_server # python
 :LspInstall yamlls               # yaml
 ```
+
+更多Lsp安装选项可以通过`:LspInstallInfo`查看。
+
+你可以通过修改[./snippets/](./snippets/)下的文件来定制自己的`snippet`模板，这里格式跟VSCode一致，可以参考文档：[LuaSnip VSCode](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md#vscode)。
 
 ## Plugins
 

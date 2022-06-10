@@ -109,6 +109,14 @@ local function load_options()
 	vim.cmd([[let g:blamer_date_format = '%y-%m-%d']])
 	vim.cmd([[let g:blamer_show_in_visual_modes = 0]])
 	vim.cmd([[let g:blamer_show_in_insert_modes = 0]])
+
+	vim.cmd([[autocmd FileType json set tabstop=2]])
+	vim.cmd([[autocmd FileType json set shiftwidth=2]])
+	vim.cmd([[autocmd FileType json set expandtab]])
+
+	vim.cmd([[autocmd FileType yaml set tabstop=2]])
+	vim.cmd([[autocmd FileType yaml set shiftwidth=2]])
+	vim.cmd([[autocmd FileType yaml set expandtab]])
 end
 
 load_options()
