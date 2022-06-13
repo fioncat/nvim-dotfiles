@@ -49,7 +49,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/fioncat/nvim-dotfiles/mast
 :PackerCompile
 ```
 
-注意上述安装必须确保你的本机有Rust编译环境，否则`luasnip`插件会安装失败。安装过程因为是并发的，所以因为网络原因有部分插件可能会失败，只需要重新执行`:PackerInstall`即可。
+注意上述安装必须确保你的本机有Rust编译环境，否则`sniprun`插件会安装失败。安装过程因为是并发的，所以因为网络原因有部分插件可能会失败，只需要重新执行`:PackerInstall`即可。
 
 结束之后，执行：
 
