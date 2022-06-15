@@ -110,13 +110,13 @@ local function load_options()
 	vim.cmd([[let g:blamer_show_in_visual_modes = 0]])
 	vim.cmd([[let g:blamer_show_in_insert_modes = 0]])
 
-	vim.cmd([[autocmd FileType json set tabstop=2]])
-	vim.cmd([[autocmd FileType json set shiftwidth=2]])
-	vim.cmd([[autocmd FileType json set expandtab]])
+	vim.cmd([[autocmd FileType json setlocal tabstop=2]])
+	vim.cmd([[autocmd FileType json setlocal shiftwidth=2]])
+	vim.cmd([[autocmd FileType json setlocal expandtab]])
 
-	vim.cmd([[autocmd FileType yaml set tabstop=2]])
-	vim.cmd([[autocmd FileType yaml set shiftwidth=2]])
-	vim.cmd([[autocmd FileType yaml set expandtab]])
+	vim.cmd([[autocmd FileType yaml setlocal tabstop=2]])
+	vim.cmd([[autocmd FileType yaml setlocal shiftwidth=2]])
+	vim.cmd([[autocmd FileType yaml setlocal expandtab]])
 end
 
 load_options()
