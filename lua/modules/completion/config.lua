@@ -173,6 +173,22 @@ function config.autopairs()
 end
 
 function config.nvim_lsputils()
+	local border_chars = {
+		TOP_LEFT = '┌',
+		TOP_RIGHT = '┐',
+		MID_HORIZONTAL = '─',
+		MID_VERTICAL = '│',
+		BOTTOM_LEFT = '└',
+		BOTTOM_RIGHT = '┘',
+	}
+	vim.g.lsp_utils_location_opts = {
+		height = 24,
+		preview = {
+			title = 'Location Preview',
+			border = true,
+			border_chars = border_chars
+		},
+	}
 	if vim.fn.has("nvim-0.5.1") == 1 then
 		vim.lsp.handlers["textDocument/references"] = require("lsputil.locations").references_handler
 		vim.lsp.handlers["textDocument/definition"] = require("lsputil.locations").definition_handler

@@ -17,11 +17,10 @@ completion["williamboman/nvim-lsp-installer"] = {
 	commit = "1dd5a25a61c38d3b5c72f74a3358d97764ad79e1"
 }
 -- LSP增强，修改一些行为让其更加人性化
-completion["RishabhRD/nvim-lsputils"] = {
+completion["fioncat/nvim-lsputils"] = {
 	opt = true,
 	after = "nvim-lspconfig",
 	config = conf.nvim_lsputils,
-	commit = "ae1a4a62449863ad82c70713d5b6108f3a07917c"
 }
 -- 用于自定义LSP相关的UI
 completion["tami5/lspsaga.nvim"] = {

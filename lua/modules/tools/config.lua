@@ -18,7 +18,7 @@ function config.telescope()
 			grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
 			qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 			file_sorter = require("telescope.sorters").get_fuzzy_file,
-			file_ignore_patterns = {},
+			file_ignore_patterns = { "vendor" },
 			generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
 			path_display = { "absolute" },
 			winblend = 0,
@@ -48,7 +48,7 @@ function config.telescope()
 			frecency = {
 				show_scores = true,
 				show_unindexed = true,
-				ignore_patterns = { "*.git/*", "*/tmp/*" },
+				ignore_patterns = { "*.git/*", "*/tmp/*", "vendor/*" },
 			},
 		},
 	})
