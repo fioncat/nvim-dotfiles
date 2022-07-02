@@ -41,11 +41,11 @@ display["arkav/lualine-lsp-progress"] = {
 	commit = "56842d097245a08d77912edf5f2a69ba29f275d7",
 }
 -- 定制化nvim开始菜单
-display["glepnir/dashboard-nvim"] = {
-	opt = true,
-	event = "BufWinEnter",
-	commit = "ba98ab86487b8eda3b0934b5423759944b5f7ebd"
-}
+-- display["glepnir/dashboard-nvim"] = {
+-- 	opt = true,
+-- 	event = "BufWinEnter",
+-- 	commit = "ba98ab86487b8eda3b0934b5423759944b5f7ebd"
+-- }
 
 -- 文件树插件
 display["kyazdani42/nvim-tree.lua"] = {
