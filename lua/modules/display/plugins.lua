@@ -52,7 +52,7 @@ display["kyazdani42/nvim-tree.lua"] = {
 	opt = true,
 	event = "VimEnter",
 	config = conf.nvim_tree,
-	commit = "3f4ed9b6c2598ab8304186486a05ae7a328b8d49",
+	commit = "f43b8af8f40004e476cc43d178b82350b3249d1a",
 }
 
 -- 缩进标识，在每个缩进前用'|'标识

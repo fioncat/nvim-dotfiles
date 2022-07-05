@@ -6,6 +6,7 @@ local map_cmd = bind.map_cmd
 local key_mapping = {
 	["n|gd"] = map_cr("lua vim.lsp.buf.definition()"):with_noremap():with_silent(),
 	["n|gr"] = map_cr("call feedkeys('*N') | lua vim.lsp.buf.references()"):with_noremap():with_silent(),
+	["n|gi"] = map_cr("lua vim.lsp.buf.implementation()"):with_noremap():with_silent(),
 	["n|K"] = map_cr("Lspsaga hover_doc"):with_noremap():with_silent(),
 	["n|<leader>en"] = map_cr("Lspsaga diagnostic_jump_next"):with_noremap():with_silent(),
 	["n|<leader>ep"] = map_cr("Lspsaga diagnostic_jump_prev"):with_noremap():with_silent(),
