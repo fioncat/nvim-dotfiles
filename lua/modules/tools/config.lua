@@ -20,7 +20,7 @@ function config.telescope()
 			file_sorter = require("telescope.sorters").get_fuzzy_file,
 			file_ignore_patterns = { "vendor" },
 			generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
-			path_display = { "absolute" },
+			path_display = { "truncate" },
 			winblend = 0,
 			border = {},
 			borderchars = {
@@ -36,6 +36,7 @@ function config.telescope()
 			color_devicons = true,
 			use_less = true,
 			set_env = { ["COLORTERM"] = "truecolor" },
+			dynamic_preview_title = true
 		},
 		extensions = {
 			fzf = {

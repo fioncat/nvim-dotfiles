@@ -216,6 +216,9 @@ function config.nvim_tree()
 			adaptive_size = true,
 		},
 		trash = { cmd = "trash", require_confirm = true },
+		renderer = {
+			highlight_opened_files = "all"
+		}
 	})
 end
 

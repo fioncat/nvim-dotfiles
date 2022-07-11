@@ -31,6 +31,19 @@ local key_mapping = {
 	["n|<leader>sg"] = map_cr("Telescope live_grep"):with_noremap():with_silent(),
 	["n|<leader>sb"] = map_cr("Telescope buffers"):with_noremap():with_silent(),
 	["n|<leader>ss"] = map_cr("Telescope find_files"):with_noremap():with_silent(),
+	["n|<leader>sl"] = map_cr("Telescope lsp_dynamic_workspace_symbols"):with_noremap():with_silent(),
+	["n|<leader>sd"] = map_cr("Telescope lsp_document_symbols"):with_noremap():with_silent(),
+
+	-- LSP相关，代码跳转
+	["n|gd"] = map_cr("Telescope lsp_definitions"):with_noremap():with_silent(),
+	["n|gr"] = map_cr("Telescope lsp_references"):with_noremap():with_silent(),
+	["n|gi"] = map_cr("Telescope lsp_implementations"):with_noremap():with_silent(),
+	["n|K"] = map_cr("Lspsaga hover_doc"):with_noremap():with_silent(),
+	["n|<leader>en"] = map_cr("Lspsaga diagnostic_jump_next"):with_noremap():with_silent(),
+	["n|<leader>ep"] = map_cr("Lspsaga diagnostic_jump_prev"):with_noremap():with_silent(),
+	["n|<leader>ee"] = map_cr("Trouble"):with_noremap():with_silent(),
+	-- ["n|<C-j>"] = map_cr("lua require('lspsaga.action').smart_scroll_with_saga(1)"):with_noremap():with_silent(),
+	-- ["n|<C-k>"] = map_cr("lua require('lspsaga.action').smart_scroll_with_saga(-1)"):with_noremap():with_silent(),
 
 	-- 快速注释
 	["n|<leader>ci"] = map_cr("CommentToggle"):with_noremap():with_silent(),
