@@ -1,5 +1,3 @@
-local global = require('global')
-
 local options = {
 	-- 关闭兼容模式
 	nocompatible = true,
@@ -68,55 +66,35 @@ local options = {
 
 }
 
-local function bind_option()
-	for k, v in pairs(options) do
-		if v == true then
-			vim.cmd("set " .. k)
-		elseif v == false then
-			vim.cmd("set no" .. k)
-		else
-			vim.cmd("set " .. k .. "=" .. v)
-		end
+for k, v in pairs(options) do
+	if v == true then
+		vim.cmd("set " .. k)
+	elseif v == false then
+		vim.cmd("set no" .. k)
+	else
+		vim.cmd("set " .. k .. "=" .. v)
 	end
 end
 
--- 加载配置
-local function load_options()
-	if global.is_mac then
-		vim.g.clipboard = {
-			name = "macOS-clipboard",
-			copy = { ["+"] = "pbcopy", ["*"] = "pbcopy" },
-			paste = { ["+"] = "pbpaste", ["*"] = "pbpaste" },
-			cache_enabled = 0,
-		}
-		vim.g.python_host_prog = "/usr/bin/python"
-		vim.g.python3_host_prog = "/usr/local/bin/python3"
-		vim.cmd('vmap cy "+yy')
-	end
-	bind_option()
-	-- 设置主题
-	vim.cmd([[colorscheme catppuccin]])
+vim.cmd('vmap cy "+y')
 
-	-- :w命令时常会误输入为:W，因此这里做一个映射
-	vim.cmd([[cnoreabbrev W w]])
+-- :w命令时常会误输入为:W，因此这里做一个映射
+vim.cmd([[cnoreabbrev W w]])
 
-	-- Ctrl-A 跳转到当前行首，就像Emacs那样
-	-- 重新将Ctrl-S映射为数字加2
-	vim.cmd([[nnoremap <C-s> <C-a>]])
-	vim.cmd([[nnoremap <C-a> ^]])
+-- Ctrl-A 跳转到当前行首，就像Emacs那样
+-- 重新将Ctrl-S映射为数字加2
+vim.cmd([[nnoremap <C-s> <C-a>]])
+vim.cmd([[nnoremap <C-a> ^]])
 
-	-- git blamer配置
-	vim.cmd([[let g:blamer_date_format = '%y-%m-%d']])
-	vim.cmd([[let g:blamer_show_in_visual_modes = 0]])
-	vim.cmd([[let g:blamer_show_in_insert_modes = 0]])
+-- git blamer配置
+vim.cmd([[let g:blamer_date_format = '%y-%m-%d']])
+vim.cmd([[let g:blamer_show_in_visual_modes = 0]])
+vim.cmd([[let g:blamer_show_in_insert_modes = 0]])
 
-	vim.cmd([[autocmd FileType json setlocal tabstop=2]])
-	vim.cmd([[autocmd FileType json setlocal shiftwidth=2]])
-	vim.cmd([[autocmd FileType json setlocal expandtab]])
+vim.cmd([[autocmd FileType json setlocal tabstop=2]])
+vim.cmd([[autocmd FileType json setlocal shiftwidth=2]])
+vim.cmd([[autocmd FileType json setlocal expandtab]])
 
-	vim.cmd([[autocmd FileType yaml setlocal tabstop=2]])
-	vim.cmd([[autocmd FileType yaml setlocal shiftwidth=2]])
-	vim.cmd([[autocmd FileType yaml setlocal expandtab]])
-end
-
-load_options()
+vim.cmd([[autocmd FileType yaml setlocal tabstop=2]])
+vim.cmd([[autocmd FileType yaml setlocal shiftwidth=2]])
+vim.cmd([[autocmd FileType yaml setlocal expandtab]])

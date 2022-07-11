@@ -1,6 +1,7 @@
-
-local function load_dashboard()
-	vim.g.dashboard_custom_header = {
+return function()
+	local home = os.getenv('HOME')
+	local db = require('dashboard')
+	db.custom_header = {
 	[[]],
     [[⡿⠋⠄⣀⣀⣤⣴⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣌⠻⣿⣿]],
     [[⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⣿]],
@@ -19,21 +20,36 @@ local function load_dashboard()
     [[⣿⣿⣷⡈⢷⡀⠙⠛⠻⠿⠿⠿⠿⠿⠷⠾⠿⠟⣛⣋⣥⣶⣄⠄⢀⣄⠹⣦⢹⣿]],
 	[[]],
 	}
-
-	vim.g.dashboard_custom_section = {
-		find_frecency = {
-			description = { " File frecency              SPC s r" },
-			command = "Telescope frecency",
+	db.custom_center = {
+		{
+			icon = '  ',
+			desc = 'Recently opened files                   ',
+			action =  'DashboardFindHistory',
+			shortcut = 'SPC f h'
 		},
-		find_project = {
-			description = { " Project find               SPC s p" },
-			command = "Telescope project",
+		{
+			icon = '  ',
+			desc = 'Find  File                              ',
+			action = 'Telescope find_files find_command=rg,--hidden,--files',
+			shortcut = 'SPC s f'
 		},
-		find_file = {
-			description = { " File find                  SPC s f" },
-			command = "Telescope find_files",
+		{
+			icon = '  ',
+			desc ='File Browser                            ',
+			action =  'Telescope file_browser',
+			shortcut = 'SPC f b'
 		},
-	}
+		{
+			icon = '  ',
+			desc = 'Find  word                              ',
+			action = 'Telescope live_grep',
+			shortcut = 'SPC s g'
+		},
+		{
+			icon = '  ',
+			desc = 'Open Personal dotfiles                  ',
+			action = 'Telescope dotfiles path=' .. home ..'/.zshrc',
+			shortcut = 'SPC f d'
+		},
+    }
 end
-
-load_dashboard()

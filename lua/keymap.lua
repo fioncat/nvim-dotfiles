@@ -1,7 +1,8 @@
-local bind = require("keybind")
+local bind = require("config.keybind")
 local map_cr = bind.map_cr
 local map_cu = bind.map_cu
 local map_cmd = bind.map_cmd
+
 
 local key_mapping = {
 	-- 分屏
@@ -74,9 +75,5 @@ local key_mapping = {
 	["n|<leader>jw"] = map_cr("HopWord"):with_noremap():with_silent(),
 }
 
-local function load_keymap()
-	vim.g.mapleader = " "
-	bind.nvim_load_mapping(key_mapping)
-end
-
-load_keymap()
+vim.g.mapleader = " "
+bind.nvim_load_mapping(key_mapping)
